@@ -1,14 +1,16 @@
 import './App.css';
 import Navbar from './components/navbar';
+import Products from './components/products';
 
 
-const url = 'https://fakestoreapi.com/products'
+
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-      <h4>Fetch data with Axios</h4>
+      <h4>Products</h4>
+      <Products/>
     </div>
   );
 }
