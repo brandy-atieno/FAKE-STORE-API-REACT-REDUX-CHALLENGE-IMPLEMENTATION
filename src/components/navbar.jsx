@@ -6,7 +6,7 @@ const Navbar = () => {
         <span>Fake store</span>
         <input type="text" placeholder='search products'/>
         <div className="cart">
-           <i class="fal fa-cart-plus "></i>
+           <i className="fal fa-cart-plus "></i>
            <span className='count'>0</span>
         </div>
         

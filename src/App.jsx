@@ -1,17 +1,25 @@
 import './App.css';
 import Navbar from './components/navbar';
-import Products from './components/products';
-
+import SideBar from './components/SideBar';
+import { Outlet } from 'react-router-dom'
+import { Provider } from 'react-redux';
+import store from './redux/store'
+ 
 
 
 
 function App() {
   return (
-    <div className="App">
+    <Provider store={store}>
+      <div className="App">
       <Navbar/>
-      <h4>Products</h4>
-      <Products/>
+      <div className="container">
+      <SideBar/>
+      <Outlet/>
+      </div>
     </div>
+    </Provider>
+    
   );
 }
 
