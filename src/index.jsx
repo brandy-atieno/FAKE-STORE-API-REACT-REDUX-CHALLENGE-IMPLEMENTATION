@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Products from './components/products';
+import ProductDetails from './components/ProductDetails';
 import CategoryProducts from './components/CategoryProducts';
 
 
@@ -17,6 +18,7 @@ root.render(
           <Route path='/' element={<App />}>
             <Route index element={ <Products/>}/>
             <Route path='/:category' element={<CategoryProducts/>}/>
+            <Route path="/product/:id"element={ <ProductDetails/>}/>
           </Route>
         </Routes>
       </Router>

@@ -3,6 +3,7 @@ import axios from 'axios'
 import Product from './product'
 import { addproducts } from '../redux/slices/productsReducer'
 import { useDispatch, useSelector } from 'react-redux/es/exports'
+import ProductDetails from './ProductDetails'
 
 const url = 'https://fakestoreapi.com/products'
 
@@ -18,6 +19,7 @@ const Products = () => {
       <h4>Products</h4>
       <div className='products'>
         {products? products.map(product=>(<Product product={product} key={product.id}/>)): "Loading..."}
+        
       </div>
     </div>
   )
